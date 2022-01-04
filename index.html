@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Mug Maker</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oldenburg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="trecia.css" type="text/css">
+    <style>
+        header {
+            background-color: darkred;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="code.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>MagicMugMaker</h1>
+        </div>
+        <img src="mug.png" alt="mug logo">
+    </header>
+    <section>
+        <div id="frontAd">
+            <h2>Get your enchanted mug today!</h2> <br>
+            <p> Ever thought of how marvelous it would be to have an extrordinary mug? A mug that is not dematerialized by your cat? Well our Magic Mugs do that! And many other things too. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates doloribus ipsa numquam voluptas corrupti illo sunt mollitia animi aspernatur! Explicabo aut, excepturi fugiat tenetur eligendi sed sunt itaque sit incidunt.</p>
+            <a href="originStory.html">Our Origin Story</a>
+        </div>
+        <div id="mugInfo">
+            <h3>Choose your enchantment components:</h3>
+            <table>
+                <tr>
+                    <th> </th>
+                    <th>Coca-Cola Cap</th>
+                    <th>Uranium Nugget</th>
+                    <th>Duct Tape</th>
+                    <th>Diamond</th>
+                </tr>       
+                <tr>
+                    <th>Coca-Cola</th>
+                    <td>Endless Coca-Cola</td>
+                    <td>Invisible</td>
+                    <td rowspan="3">Levitation</td>
+                    <td>Immune to Cats</td>
+                </tr>
+                <tr>
+                    <th>Cocoa</th>
+                    <td rowspan="2">Vantablack</td>
+                    <td rowspan="2">Luminescence</td>
+                    <td rowspan="3">Reveals the Truth</td>
+
+                </tr>
+                <tr>
+                    <th>Green Tea</th>
+                </tr>
+                <tr>
+                    <th>Skeleton Tears</th>
+                    <td>Cools</td>
+                    <td colspan="2">Warms</td>
+                </tr>
+                <tr>
+                    <th>Fish Sweat</th>
+                    <td colspan="2">Infinite Capacity</td>
+                    <td colspan="2">Fishing Source</td>
+                </tr>   
+            </table>
+
+            <h3>Explanation of effects:</h3>
+            <ul>
+                <li>Endless Coca-Cola. Your mug will never run out of that fizzy goodness.</li>
+                <li>Invisible. Mug and its contents are completely invisible, no roommate will snatch your drink!</li>
+                <li>Levitation. Leave your mug anywhere you like.</li>
+                <li>Immune to cats. Latest in our line. No cat will knock this cup down!</li>
+                <li>Vantablack. Absorbs 99.965% of light, because we love technology!</li>
+                <li>Illumination. Emits light for that late-night nourishment!</li>
+                <li>Reveals the truth. Look up to the countess lights above. Do you see it now?</li>
+                <li>Cools. For those hot martian days.</li>
+                <li>Warms. For those cold lunar nights.</li>
+                <li>Infinite capacity. We take no responsibility for what you drop inside!</li>
+                <li>Fishing source. Fish from the comfort of your throne!</li>
+            </ul>
+        </div>
+
+        <div id="mugOrder">
+            <h3>Order your mug tonight!</h3>
+            <form id="mugOrderForm" name="mugOrderForm">
+                
+                <h4>Name:</h4>
+                <label>
+                    <input type="text" name="nameField" onchange="checkName()"><br>
+                </label>
+
+                <h4>Age:</h4>
+                <label>
+                    <input type="text" name="ageField" onchange="checkAge()"><br>
+                </label>
+
+                <h4>Delivery date:</h4>
+                <label>
+                    <input type="text" name="year" onchange="checkDate()">
+                    <input type="text" name="month" onchange="checkDate()">
+                    <input type="text" name="day" onchange="checkDate()"><br>
+                </label>
+
+                <h4>Occupation:</h4>
+                <label>
+                    <input type="radio" name="occupation" value="Wizard" onclick="checkOccupation('Wizard')"> Wizard
+                </label> <br>
+                <label>
+                    <input type="radio" name="occupation" value="Witch" onclick="checkOccupation('Witch')"> Witch
+                </label> <br>
+                <label>
+                    <input type="radio" name="occupation" value="Space Droid" onclick="checkOccupation('Space Droid')" checked="checked"> Space Droid
+                </label> <br>
+
+                <h4>Enchantment component one:</h4>
+                <label>
+                    <input type="radio" name="componentOne" value="Coca-Cola Cap" onclick="checkCompOne('Coca-Cola cap')" checked="checked"> Coca-Cola Cap
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentOne" value="Uranium Nugget" onclick="checkCompOne('Uranium Nugget')"> Uranium Nugget
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentOne" value="Duct Tape" onclick="checkCompOne('Duct tape')"> Duct Tape
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentOne" value="Diamond" onclick="checkCompOne('Diamond')"> Diamond
+                </label> <br>
+
+                <h4>Enchantment component two:</h4>
+                <label>
+                    <input type="radio" name="componentTwo" value="Coca-Cola" onclick="checkCompTwo('Coca-Cola')" checked="checked"> Coca-Cola
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentTwo" value="Cocoa" onclick="checkCompTwo('Cocoa')"> Cocoa
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentTwo" value="Green Tea" onclick="checkCompTwo('Green Tea')"> Green Tea
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentTwo" value="Skeleton Tears" onclick="checkCompTwo('Skeleton Tears')"> Skeleton Tears
+                </label> <br>
+                <label>
+                    <input type="radio" name="componentTwo" value="Fish Sweat" onclick="checkCompTwo('Fish Sweat')"> Fish Sweat
+                </label> <br>
+
+                <h4 id="extrasHeader">Choose extras:</h4>
+                <select multiple size="3" name="extrasSelect" onchange="checkExtras()">
+                    <option>Spoon</option>
+                    <option>Lid</option>
+                    <option>Plate</option>
+                    <option>Sugar</option>
+                    <option>Cat</option>
+                </select> <br>
+                
+                <label>
+                    <input type="checkbox" name="responsibilityAcceptance"> I am aware of the power and responsibility I accept by buying this mug
+                </label> <br>
+                
+                <input id="submit" type="button" value="Send" onclick="mugOrderFormHandling()">
+                <input type="reset" value="Clear">
+            </form>
+            <h3>Current Order:</h3>
+            <div id="mugOrderComplete">
+                <h4 id="orderName"        >Name:          </h4>
+                <h4 id="orderAge"         >Age:           </h4>
+                <h4 id="orderDeliveryDate">Delivery Date: </h4>
+                <h4 id="orderOccupation"  >Occupation: Space Droid</h4>
+                <h4 id="orderCompOne"     >Component one: Coca-Cola cap</h4>
+                <h4 id="orderCompTwo"     >Component two: Coca-Cola</h4>
+                <h4>Extras: </h4>
+                <ul id="extrasList"></ul>
+            </div>
+            <h3>Recent Order:</h3>
+            <input id="loadButton" type="button" value="Load" onclick="loadRecentOrder()">
+            <div id="mugOrderRecent">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td id="nameCell"></td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td id="ageCell"></td>
+                    </tr>
+                    <tr>
+                        <th>Delivery Date</th>
+                        <td id="deliveryDateCell"></td>
+                    </tr>
+                    <tr>
+                        <th>Occupation</th>
+                        <td id="occupationCell"></td>
+                    </tr>
+                    <tr>
+                        <th>Component one</th>
+                        <td id="componentOneCell"></td>
+                    </tr>
+                    <tr>
+                        <th>Component two</th>
+                        <td id="componentTwoCell"></td>
+                    </tr>
+                    <tr>
+                        <th>Extras</th>
+                        <td id="extrasCell"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="clearFloat"> </div>
+    </section>
+    <footer>
+        <p>Developed by GammaRayGhoul Inc. All your rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #fff9e9;
+    font-family:'Oldenburg';
+    width: screen;
+}
+
+header {
+    height: 80px;
+    background-color:#4b9ab4 !important;
+}
+.logo {
+    height: inherit;
+    margin-left: 30px;
+    display: table;
+    float: left;
+}
+.logo > h1{
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff9e9;
+}
+header > img {
+    height: 70px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+section {
+    margin: auto;
+    min-width: 600px;
+    width: 60%;
+    min-height: calc(100vh - 140px);
+}
+
+@media only screen and (max-width: 600px) {
+    section {
+        min-width: 0px;
+        width: 90%;
+    }
+}
+
+#frontAd {
+    margin-bottom: 60px;
+}
+#frontAd > p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+#mugInfo {
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 60px;
+}
+#mugInfo > h3 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+    table {
+        table-layout: fixed;
+        width: 100%;
+        word-wrap: break-word;
+        font-size: smaller;
+        padding: 1px;
+    }
+}
+table, td, th {
+    table-layout: fixed;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 3px;
+}
+th {
+    width: 20%;
+    background-color: #4b9ab4;
+    color: #fff9e9;
+}   
+
+#mugOrder {
+    margin-bottom: 20px;
+    display: block;
+    height: 750px;
+}
+#mugOrder input[type="text"], select {
+    width: 300px;
+    font-size: medium;
+    font-family:'Oldenburg';
+}
+#mugOrder input[name="year"]{
+    width: 60px;
+}
+#mugOrder input[name="month"]{
+    width: 40px;
+}
+#mugOrder input[name="day"]{
+    width: 40px;
+}
+#mugOrder h4, input[type="checkbox"] {
+    margin-top: 10px;
+}
+#mugOrder #submit, input[type="reset"] {
+    width: 60px;
+    margin-top: 10px;
+    font-size: medium;
+    font-family:'Oldenburg';
+    padding: 2px;
+    color: #fff9e9;
+}
+#submit {
+    background-color: #4b9ab4;
+}
+#mugOrder input[type="reset"] {
+    background-color: #bb2b2a;
+}
+
+@media only screen and (max-width: 600px) {
+    #mugOrder input[type="text"], select {
+        width: 100%;
+    }
+    #mugOrder #submit, input[type="reset"] {
+        width: 100%;
+    }
+}
+
+#mugOrderForm {
+    display: inline;
+    float: left;
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 47%;
+    padding: 10px;
+}
+#mugOrderComplete {
+    display: inline;
+    float: left;
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 47%;
+    padding: 10px;
+}
+#mugOrderComplete h4 {
+    margin-bottom: 15px;
+}
+#extrasList{
+    padding-left: 40px;
+}
+
+#mugOrderRecent {
+    white-space: nowrap;
+    display: inline;
+    float: left;
+    width: 50%;
+}
+#mugOrderRecent table, th, td{
+    text-align: left;
+}
+
+#loadButton {
+    width: 60px;
+    margin: 3px;
+    font-size: medium;
+    font-family:'Oldenburg';
+    padding: 2px;
+    color: #fff9e9;
+    background-color: #4b9ab4;
+}
+
+#clearFloat {
+    clear: both;
+}
+
+footer {
+    height: 40px;
+    padding-top: 20px;
+    text-indent: 2em;
+    margin-top: 50px;
+    
+    color: #fff9e9;
+    background-color:#553f3a;
+}
+@media only screen and (max-width: 600px) {
+    footer {
+        height: 40px;
+    padding: 20px;
+    text-indent: 2em;
+    }
+}
+
